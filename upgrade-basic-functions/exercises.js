@@ -60,3 +60,30 @@ function averageWord(array) {
     }
     return result;
 }
+
+//Iteración #6
+const duplicates = [
+    'sushi',
+    'pizza',
+    'burger',
+    'potatoe',
+    'pasta',
+    'ice-cream',
+    'pizza',
+    'chicken',
+    'onion rings',
+    'pasta',
+    'soda',
+    'sushi'
+];
+function removeDuplicates(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (newArray.includes(array[i])) {
+            continue;
+        } else {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray
+}
