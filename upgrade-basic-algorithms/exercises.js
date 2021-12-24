@@ -50,3 +50,28 @@ const z2 = 5;
 const res = y2 + z2;
 // 1.5 
 const res2 = y2 * z2;
+
+
+//Iteracion#4
+// 1.1 
+const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+let favorite = avengers[0];
+// 1.2 
+const avengers1 = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+avengers1.splice(0,1,"IRON MAN");
+// 1.3 
+const avengers2 = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
+console.log(avengers2.length);
+// 1.4 
+const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
+rickAndMortyCharacters.push('Morty','Summer');
+console.log(rickAndMortyCharacters[rickAndMortyCharacters.length - 1]);
+// 1.5 
+const rickAndMortyCharacters2 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+rickAndMortyCharacters2.pop();
+console.log(rickAndMortyCharacters2[0], rickAndMortyCharacters2[rickAndMortyCharacters2.length - 1]);
+
+// 1.6 
+const rickAndMortyCharacters3 = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+rickAndMortyCharacters3.splice(1, 1);
+console.log(rickAndMortyCharacters3);
