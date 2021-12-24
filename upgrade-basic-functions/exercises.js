@@ -46,3 +46,17 @@ function average(array) {
     }
     return (sumAll / array.length);
 }
+
+//Iteración #5
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+function averageWord(array) {
+    let result = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (typeof(array[i]) == "string") {
+            result += array[i].length;
+        } else if (typeof(array[i]) == "number") {
+            result += array[i];
+        }   
+    }
+    return result;
+}
