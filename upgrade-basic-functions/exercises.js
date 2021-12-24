@@ -36,3 +36,13 @@ function sumAll(array) {
     }
     return result;
 }
+
+//Iteración #4
+const numbers2 = [12, 21, 38, 5, 45, 37, 6];
+function average(array) {
+    let sumAll = 0;
+    for (let i = 0; i < array.length; i++) {
+        sumAll += array[i];
+    }
+    return (sumAll / array.length);
+}
