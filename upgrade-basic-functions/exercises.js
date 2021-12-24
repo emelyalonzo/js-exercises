@@ -36,4 +36,3 @@ function sumAll(array) {
     }
     return result;
 }
-console.log(sumAll(numbers));
