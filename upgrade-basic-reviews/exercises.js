@@ -149,4 +149,21 @@ console.log(findArrayIndex(animal,"Mosquito"));
 function rollDicee(number) {
     return console.log(Math.ceil(number * Math.random()));
 }
-rollDicee(2);
+
+//Iteración #6
+//Make a function that swaps two elements in an array
+function swap(array, element1, element2) {
+    let result = [];
+    for (const key in array) {
+        if (array[key] == element1) {
+            result.push(element2);
+        } else if (array[key] == element2) {
+            result.push(element1);
+        } else {
+            result.push(array[key]);
+        }
+    }
+    return console.log(result);
+}
+swap(['a', 'b', 'c','d'], 'a', 'c');
+swap(['a', 'b', 'c','d'], 'c', 'd');
