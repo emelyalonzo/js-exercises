@@ -39,3 +39,17 @@ function checkApproves(alumns) {
 
 checkApproves(alumns);
 console.log(alumns);
+
+//Iteración #3
+const placesToTravel = [
+  "Japon",
+  "Venecia",
+  "Murcia",
+  "Santander",
+  "Filipinas",
+  "Madagascar",
+];
+
+for (const element of placesToTravel) {
+  console.log(element);
+}
