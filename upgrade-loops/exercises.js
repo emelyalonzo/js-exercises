@@ -65,3 +65,34 @@ const alien = {
 for (const key in alien) {
   console.log(key + ": " + alien[key]);
 }
+
+//Iteración #5
+const placesToTravel = [
+  { id: 5, name: "Japan" },
+  { id: 11, name: "Venecia" },
+  { id: 23, name: "Murcia" },
+  { id: 40, name: "Santander" },
+  { id: 44, name: "Filipinas" },
+  { id: 59, name: "Madagascar" },
+];
+
+function deleteElements(array) {
+  for (let key = 0; key < array.length; key++) {
+    if (array[key].id == 11 || array[key].id == 40) {
+      array.splice(key, 1);
+    }
+  }
+  console.log(array);
+}
+deleteElements(placesToTravel);
+
+//with for in
+function deleteElements2(array) {
+  for (const key in array) {
+    if (array[key].id == 11 || array[key].id == 40) {
+      array.splice(key, 1);
+    }
+  }
+  console.log(array);
+}
+deleteElements2(placesToTravel);
