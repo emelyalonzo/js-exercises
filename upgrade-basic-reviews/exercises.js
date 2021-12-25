@@ -82,46 +82,71 @@ averageSounds(users);
 //Iteración #3
 // How many times has been marked as favorite a sound?
 const users2 = [
-    {name: 'Manolo el del bombo',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 50},
-            rain: {format: 'ogg', volume: 60},
-            firecamp: {format: 'mp3', volume: 80},
-        }
+  {
+    name: "Manolo el del bombo",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 50 },
+      rain: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
     },
-    {name: 'Mortadelo',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 30},
-            shower: {format: 'ogg', volume: 55},
-            train: {format: 'mp3', volume: 60},
-        }
+  },
+  {
+    name: "Mortadelo",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 30 },
+      shower: { format: "ogg", volume: 55 },
+      train: { format: "mp3", volume: 60 },
     },
-    {name: 'Super Lopez',
-        favoritesSounds: {
-            shower: {format: 'mp3', volume: 50},
-            train: {format: 'ogg', volume: 60},
-            firecamp: {format: 'mp3', volume: 80},
-        }
+  },
+  {
+    name: "Super Lopez",
+    favoritesSounds: {
+      shower: { format: "mp3", volume: 50 },
+      train: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
     },
-    {name: 'El culebra',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 67},
-            wind: {format: 'ogg', volume: 35},
-            firecamp: {format: 'mp3', volume: 60},
-        }
+  },
+  {
+    name: "El culebra",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 67 },
+      wind: { format: "ogg", volume: 35 },
+      firecamp: { format: "mp3", volume: 60 },
     },
-]
+  },
+];
 function favouriteSounds(array) {
-    let result = {};
-    for (const iterator of array) {
-      for (const key in iterator.favoritesSounds) {
-        if (key in result) {
-            result[key] += 1;
-        } else {
-            result[key] = 1;
-        }
+  let result = {};
+  for (const iterator of array) {
+    for (const key in iterator.favoritesSounds) {
+      if (key in result) {
+        result[key] += 1;
+      } else {
+        result[key] = 1;
       }
     }
-    return console.log(result);
   }
-  favouriteSounds(users2);
+  return console.log(result);
+}
+favouriteSounds(users2);
+
+//Iteración #4
+// Make a function that returns the index of an element in an array
+const animal = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+function findArrayIndex(array, text) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === text) {
+      return "The index of " +array[i]+ " is " +i;
+    }
+  }
+  return "Not found";
+}
+console.log(findArrayIndex(animal,"Serpiente"));
+console.log(findArrayIndex(animal,"Mosquito"));
+
+//Iteración #5
+//Make a function that simulates a Dicee
+function rollDicee(number) {
+    return console.log(Math.ceil(number * Math.random()));
+}
+rollDicee(2);
