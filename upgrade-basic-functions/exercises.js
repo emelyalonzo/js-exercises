@@ -110,3 +110,31 @@ function finderName(array, element) {
     }
 }
 
+//Iteración #8
+const counterWords = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'upgrade',
+    'code'
+];
+  
+function repeatCounter(array) {
+    let repetitions = {};
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] in repetitions) {
+        repetitions[array[i]] += 1;
+        } else {
+        repetitions[array[i]] = 1;
+        }
+    }
+    return console.log(repetitions);
+}
+
+repeatCounter(counterWords);
