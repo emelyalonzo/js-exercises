@@ -99,9 +99,7 @@ function longestString(array) {
 console.log(longestString(["help", "me"]));
 console.log(longestString(["hello world", "helloworld"]));
 
-// Crea una función que tome dos arrays de números como parámetros. Une ambos
-// arrays, remueve valores duplicados (si hay alguno) y ordena los números en orden
-// ascendente.
+// Make a function that takes two arrays as parameters, mix them, remove duplicates, and sort ascending
 function merge(array1, array2) {
   let mixed = array1.concat(array2);
   let withoutDuplicates = mixed.filter(
@@ -113,3 +111,15 @@ function merge(array1, array2) {
   return withoutDuplicates;
 }
 console.log(merge([1, 2, 3, 0.3], [1, 4, 89, 2, 3, 0.1])); //output: [0.1, 0.3, 1, 2, 3, 4, 89]
+
+// Make a function that takes as parameters an object and a property name, and deletes that property.
+// If propertyName is 'country':
+// const myObj = { city: 'Sacramento', state: 'California', country: 'USA', continent: 'North
+// America' }
+// => output: { city: 'Sacramento', state: 'California', continent: 'North America' }
+function deleteProperty(object, propertyName) {
+    delete object[propertyName];
+    return object;
+}
+console.log(deleteProperty({ city: 'Sacramento', state: 'California', country: 'USA', continent: 'North America' }, 'country'));
+
