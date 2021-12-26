@@ -140,3 +140,23 @@ function deleteEmpty(object) {
     return object
 }
 console.log(deleteEmpty({ a: '', b: 'b', c: ' ', d: 'd' }))
+
+// Make a function that adds a property and its value to every item in a string of objects
+// ([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia')
+// => output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country:
+// 'Thailand', continent: 'Asia' }]
+// ([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe')
+// => output: [{ city: 'Stockholm', country: 'Sweden', continent: 'Europe' }, { city: 'Paris', country:
+// 'France', continent: 'Europe' }]
+let cities1 = [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }];
+let cities2 = [{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }];
+
+function addProperty(objects,propertyName,propertyValue) {
+    for (let i = 0; i < objects.length; i++) {
+        objects[i][propertyName] = propertyValue;
+    }
+    return objects;
+}
+
+console.log(addProperty(cities1, 'continent', 'Asia'));
+console.log(addProperty(cities2, 'continent', 'Europe'))
