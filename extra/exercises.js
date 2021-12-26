@@ -50,3 +50,18 @@ function separate(num) {
 console.log(separate(10));
 console.log(separate(13.4));
 console.log(separate(-13.4));
+
+// Make a function that takes an array as parameters and checks if all elements are the 
+// same in value and type. If positive, returns true, if not returns false
+// ([true, true, true, true]) => output: true
+// (['10',10,10,10]) => output: false
+function sameValue(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (!(array[0] === array[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(sameValue([true, true, true, true]));
+console.log(sameValue(['10',10,10,10]));
