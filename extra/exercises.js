@@ -28,3 +28,25 @@ function mixStrings(a, b) {
 console.log(mixStrings('cheese', 'cake'));
 console.log(mixStrings('therefore I am', 'I think'));
 console.log(mixStrings('Oranges with honey', 'watermelon and apple with honey')); 
+
+// Make a function that takes as parameter a number and splits it in digits.
+// (10) => output: [1,0]
+// (13.4) => output: [1,3,'.',4]
+// (-13.4) => output: ['-',1,3,'.',4]
+function separate(num) {
+    let stringNumber = num.toString();
+    let array = [];
+    for (let i = 0; i < stringNumber.length; i++) {
+        if (stringNumber[i] === ".") {
+            array.push (".");
+        } else if (stringNumber[i] === "-"){
+            array.push ("-");
+        } else {
+            array.push(Number(stringNumber[i]));
+        }
+    }
+    return array;
+}
+console.log(separate(10));
+console.log(separate(13.4));
+console.log(separate(-13.4));
