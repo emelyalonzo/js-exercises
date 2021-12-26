@@ -124,3 +124,19 @@ console.log(deleteProperty(myObj, 'country'));
 
 // Shows in console, the value of city
 console.log(myObj.city);
+
+// Change the value '' for 'null' in these objects
+// { a: 'a', b: 'b', c: '' }
+// { a: '', b: 'b', c: ' ', d: 'd' }
+// { a: 'a', b: 'b ', c: ' ', d: '' }
+// => output: { a: 'a', b: 'b', c: null }
+
+function deleteEmpty(object) {
+    for (const prop in object) {
+        if (object[prop] === '' || object[prop] === ' ') {
+            object[prop] = null;
+        }
+    }
+    return object
+}
+console.log(deleteEmpty({ a: '', b: 'b', c: ' ', d: 'd' }))
