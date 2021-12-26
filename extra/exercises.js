@@ -77,3 +77,20 @@ console.log(sortDescending([2,3,1,34,2,342,0.3]));
 // ['b', 'c', 'd', 'a'] => output: ['a', 'b', 'c', 'd']
 let array = ['b', 'c', 'd', 'a'];
 console.log(array.sort());
+
+// Make a function that takes as parameter an array of strings and shows in console the longest string
+// (['help', 'me']) => output: “help”
+function longestString(array) {
+    let longest = 0;
+    let result = "";
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].length > longest){
+            result = array[i];
+            longest = array[i].length; 
+        }
+    }
+    return result;
+}
+
+console.log(longestString(['help', 'me']));
+console.log(longestString(['hello world', 'helloworld']));
