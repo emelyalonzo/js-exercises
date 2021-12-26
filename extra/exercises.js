@@ -159,4 +159,6 @@ function addProperty(objects,propertyName,propertyValue) {
 }
 
 console.log(addProperty(cities1, 'continent', 'Asia'));
-console.log(addProperty(cities2, 'continent', 'Europe'))
+console.log(addProperty(cities2, 'continent', 'Europe'));
+
+
