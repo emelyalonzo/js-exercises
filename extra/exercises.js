@@ -66,10 +66,14 @@ function sameValue(array) {
 console.log(sameValue([true, true, true, true]));
 console.log(sameValue(['10',10,10,10]));
 
-// Dado un array de números, muestra por consola un array con dichos números
-// ordenados en forma descendente.
+// Show in console an array of numbers sort descending
 function sortDescending(array) {
     array.sort(function(a, b){return b-a});
     return array;
 }
 console.log(sortDescending([2,3,1,34,2,342,0.3]));
+
+// Given an array show in console another array sort alphabetically
+// ['b', 'c', 'd', 'a'] => output: ['a', 'b', 'c', 'd']
+let array = ['b', 'c', 'd', 'a'];
+console.log(array.sort());
