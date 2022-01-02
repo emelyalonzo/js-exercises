@@ -146,7 +146,6 @@ createPyramidReverse(9);
 /* 
 * Palindrome
 */
-
 const palindrome = (word) => {
     let initialWord = word.toUpperCase().replace(/ /g,'');
     let reverseWord = initialWord.split('').reverse().join('');
