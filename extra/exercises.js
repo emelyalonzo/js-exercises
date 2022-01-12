@@ -1,42 +1,34 @@
-// Function that returns true if a number is an integer, and false if not
+//#1
 function integerNumber(num) {
   return Number.isInteger(num);
 }
+console.log(integerNumber(3));
+console.log(integerNumber(2.6));
 
-// Make a function that takes as parameters two strings 'a' and 'b' and returns another string:
-// if 'a' contains something of 'b', and the position of that value in common in 'b' is smaller
-// than position in 'a', then the result is 'b' before 'a'. If 'a' do not contains something of 'b',
-// then the result is 'a' before 'b'.
-// Examples:
-// (“cheese”, “cake”) => output: “cheesecake”
-// (“Java”, “script”) => output: “JavaScript”
-// (“therefore I am”, “I think”) => output: “I think, therefore I am”
-// (“Oranges with honey”, “watermelon and apple with honey”) => output: “Oranges with honeywatermelon and apple with honey”
+
+
+
+
+//#2
 function mixStrings(a, b) {
-  let arrayA = a.split(" ");
-  let arrayB = b.split(" ");
-
-  for (let i = 0; i < arrayB.length; i++) {
-    if (arrayA.includes(arrayB[i])) {
-      if (arrayA.indexOf(arrayB[i]) > i) {
-        return b + ", " + a;
-      }
-    }
+  if (a.includes(b)) {
+    return b + " " + a;
+  } else {
+    return a + b;
   }
-  return a + b;
 }
 console.log(mixStrings("cheese", "cake"));
-console.log(mixStrings("therefore I am", "I think"));
-console.log(
-  mixStrings("Oranges with honey", "watermelon and apple with honey")
-);
+console.log(mixStrings("think, therefore I am", "I"));
 
-// Make a function that takes as parameter a number and splits it in digits.
-// (10) => output: [1,0]
-// (13.4) => output: [1,3,'.',4]
-// (-13.4) => output: ['-',1,3,'.',4]
+
+
+
+
+
+
+//#3
 function separate(num) {
-  let stringNumber = num.toString();
+  let stringNumber = String(num);
   let array = [];
   for (let i = 0; i < stringNumber.length; i++) {
     if (stringNumber[i] === ".") {
@@ -52,11 +44,15 @@ function separate(num) {
 console.log(separate(10));
 console.log(separate(13.4));
 console.log(separate(-13.4));
+console.log(separate(0.4));
 
-// Make a function that takes an array as parameters and checks if all elements are the
-// same in value and type. If positive, returns true, if not returns false
-// ([true, true, true, true]) => output: true
-// (['10',10,10,10]) => output: false
+
+
+
+
+
+
+//#4
 function sameValue(array) {
   for (let i = 0; i < array.length; i++) {
     if (!(array[0] === array[i])) {
@@ -68,22 +64,42 @@ function sameValue(array) {
 console.log(sameValue([true, true, true, true]));
 console.log(sameValue(["10", 10, 10, 10]));
 
-// Show in console an array of numbers sort descending
+
+
+
+
+
+
+
+
+//#5
 function sortDescending(array) {
-  array.sort(function (a, b) {
+  array.sort((a, b) => {
     return b - a;
   });
   return array;
 }
 console.log(sortDescending([2, 3, 1, 34, 2, 342, 0.3]));
 
-// Given an array show in console another array sort alphabetically
-// ['b', 'c', 'd', 'a'] => output: ['a', 'b', 'c', 'd']
+
+
+
+
+
+
+
+
+//#6
 let array = ["b", "c", "d", "a"];
 console.log(array.sort());
 
-// Make a function that takes as parameter an array of strings and shows in console the longest string
-// (['help', 'me']) => output: “help”
+
+
+
+
+
+
+//#7
 function longestString(array) {
   let longest = 0;
   let result = "";
@@ -95,11 +111,17 @@ function longestString(array) {
   }
   return result;
 }
-
-console.log(longestString(["help", "me"]));
+console.log(longestString(["two", "four"]));
 console.log(longestString(["hello world", "helloworld"]));
 
-// Make a function that takes two arrays as parameters, mix them, remove duplicates, and sort ascending
+
+
+
+
+
+
+
+//#8
 function merge(array1, array2) {
   let mixed = array1.concat(array2);
   let withoutDuplicates = mixed.filter(
@@ -110,10 +132,16 @@ function merge(array1, array2) {
   });
   return withoutDuplicates;
 }
-console.log(merge([1, 2, 3, 0.3], [1, 4, 89, 2, 3, 0.1])); //output: [0.1, 0.3, 1, 2, 3, 4, 89]
+console.log(merge([1, 2, 3, 3, 0.3], [1, 4, 89, 2, 3, 0.1])); //output: [0.1, 0.3, 1, 2, 3, 4, 89]
 
-// Make a function that takes as parameters an object and a property name, and deletes that property.
-// If propertyName is 'country':
+
+
+
+
+
+
+
+//#9
 const myObj = { city: 'Sacramento', state: 'California', country: 'USA', continent: 'North America' }
 // => output: { city: 'Sacramento', state: 'California', continent: 'North America' }
 function deleteProperty(object, propertyName) {
@@ -122,15 +150,21 @@ function deleteProperty(object, propertyName) {
 }
 console.log(deleteProperty(myObj, 'country'));
 
-// Shows in console, the value of city
+
+
+
+
+
+
+
+//#10
 console.log(myObj.city);
 
-// Change the value '' for 'null' in these objects
-// { a: 'a', b: 'b', c: '' }
-// { a: '', b: 'b', c: ' ', d: 'd' }
-// { a: 'a', b: 'b ', c: ' ', d: '' }
-// => output: { a: 'a', b: 'b', c: null }
 
+
+
+
+//#11
 function deleteEmpty(object) {
     for (const prop in object) {
         if (object[prop] === '' || object[prop] === ' ') {
@@ -141,13 +175,12 @@ function deleteEmpty(object) {
 }
 console.log(deleteEmpty({ a: '', b: 'b', c: ' ', d: 'd' }))
 
-// Make a function that adds a property and its value to every item in a string of objects
-// ([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia')
-// => output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country:
-// 'Thailand', continent: 'Asia' }]
-// ([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe')
-// => output: [{ city: 'Stockholm', country: 'Sweden', continent: 'Europe' }, { city: 'Paris', country:
-// 'France', continent: 'Europe' }]
+
+
+
+
+
+//#12
 let cities1 = [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }];
 let cities2 = [{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }];
 
@@ -160,5 +193,3 @@ function addProperty(objects,propertyName,propertyValue) {
 
 console.log(addProperty(cities1, 'continent', 'Asia'));
 console.log(addProperty(cities2, 'continent', 'Europe'));
-
-
